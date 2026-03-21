@@ -42,7 +42,7 @@
 
 # Segurança de Dados
 
-> **Última sincronização:** 21/03/2026 18:40:05
+> **Última sincronização:** 21/03/2026 19:36:50
 
 ## Sumário de Aulas
 
