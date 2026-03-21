@@ -1,6 +1,7 @@
 # Apresentação da Disciplina
 
 - Arquivo da [aula 01](https://drive.google.com/file/d/18R47Vy-GQOJOcG-okRzwtu3C6v52VZQm/view?usp=sharing).
+- Data da Postagem: 11/03/2026
 
 ## Tópicos
 
