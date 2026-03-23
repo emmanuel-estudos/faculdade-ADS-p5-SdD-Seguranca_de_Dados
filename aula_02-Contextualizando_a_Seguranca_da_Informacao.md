@@ -12,6 +12,9 @@
   - [Pilares da Segurança da Informação](#pilares-da-segurança-da-informação)
   - [Criptografia](#criptografia)
   - [Tipos de Criptografia](#tipos-de-criptografia)
+  - [Controle de Acesso](#controle-de-acesso)
+  - [CERT.BR](#certbr)
+  - [Incidentes de Segurança](#incidentes-de-segurança)
 
 ## Problematização
 
@@ -140,3 +143,38 @@ cipher_text = [D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y,
 <p align="right" class="legenda">
   <ins><i>Criptografia Assimétrica</i></ins>
 </p>
+
+## Controle de Acesso
+
+- **Autenticação**: forma de um usuário provar que ele é ele mesmo, através de provar:
+  - Algo que você sabe (senha)
+  - Algo que você tem (smartcard, cartão de banco, assinatura digital)
+  - Algo que você é (biometria: leitor digital, leitor da íris e análise da palma da mão)
+- **Autorização**: após a autenticação, o usuário estará apto ao sistema, seguindo restrições impostas pelo mesmo
+
+## CERT.BR
+
+> &emsp; Grupo de Resposta a Incidentes de Segurança para a Internet no Brasil. mantido pelo NIC.br, do Comitê Gestor da Internet no Brasil. É responsável por tratar incidentes de segurança em computadores que envolvam redes conectadas à Internet no Brasil.
+>
+> &emsp; Atua como um ponto central para notificações de incidentes de segurança no Brasil, provendo a coordenação e o apoio no processo de resposta a incidentes e, quando necessário, colocando as partes envolvidas em contato.
+>
+> &emsp; Além do processo de tratamento a incidentes em si, o CERT.br também atua através do trabalho de conscientização sobre os problemas de segurança, da análise de tendências e correlação entre eventos na Internet brasileira e do auxílio ao estabelecimento de novos CSIRTs no Brasil.
+>
+> &emsp; Estas atividades têm como objetivo estratégico aumentar os níveis de segurança e de capacidade de tratamento de incidentes das redes conectadas à Internet no Brasil.
+>
+> &emsp; As atividades conduzidas pelo CERT.br fazem parte das atribuições do CGI.br de:
+> 
+> - I - estabelecer diretrizes estratégicas relacionadas ao uso e desenvolvimento da Internet no Brasil;
+> - IV - promover estudos e recomendar procedimentos, normas e padrões técnicos e operacionais, para a
+segurança das redes e serviços de Internet, bem assim para a sua crescente e adequada utilização pela sociedade
+> - VI - ser representado nos fóruns técnicos nacionais e internacionais relativos à Internet; Bem como dos objetivos do NIC.br, conforme seu Estatuto:
+> - IV - atender aos requisitos de segurança e emergências na Internet Brasileira em articulação e cooperação com as entidades e os órgãos responsáveis;
+> - VII - promover ou colaborar na realização de cursos, simpósios, seminários, conferências, feiras e congressos, visando contribuir para o desenvolvimento e aperfeiçoamento do ensino e dos conhecimentos nas áreas de suas especialidades.
+
+## Incidentes de Segurança
+
+&emsp; Como afirma o CERT (Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil), em [5]:
+
+> "Qualquer evento adverso, confirmado ou sob suspeita, relacionado à segurança dos sistemas de computação ou das redes de computadores".
+>
+> "O ato de violar uma política de segurança, explícita e implícita".
