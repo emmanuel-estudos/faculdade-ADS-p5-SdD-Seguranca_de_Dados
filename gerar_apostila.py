@@ -1,5 +1,10 @@
 import sys
 import os
+import subprocess
+
+# Informações Específicas para a criação do Arquivo
+nome_arquivo = "Apostila-Segurança_de_Dados.md"
+titulo_arquivo = "Segurança de Dados"
 
 # Pega o caminho absoluto da pasta onde ESTE arquivo está (Pasta do Curso)
 diretorio_do_curso = os.path.dirname(os.path.abspath(__file__))
@@ -15,8 +20,18 @@ try:
 
     executar(
         caminho_pasta=diretorio_do_curso, 
-        nome_arquivo_personalizado="Apostila-Segurança_de_Dados.md",
-        titulo_customizado="Segurança de Dados"
+        nome_arquivo_personalizado=nome_arquivo,
+        titulo_customizado=titulo_arquivo
     )
+
+    # reabrindo o arquivo markdown gerado
+    caminho_final = os.path.join(diretorio_do_curso, nome_arquivo)
+    
+    if os.path.exists(caminho_final):
+        # Chama o executável 'code' do seu sistema
+        subprocess.run(["code", "-r", caminho_final], shell=True)
+
 except ImportError as e:
     print(f"❌ Erro ao importar a Wiki: {e}")
+except Exception as e:
+    print(f"⚠️ Erro ao tentar abrir no VS Code: {e}")

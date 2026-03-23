@@ -9,7 +9,9 @@
   - [Sumário](#sumário)
   - [Problematização](#problematização)
   - [Evolução da Segurança da Informação](#evolução-da-segurança-da-informação)
-  - [Pilares da Segurança](#pilares-da-segurança)
+  - [Pilares da Segurança da Informação](#pilares-da-segurança-da-informação)
+  - [Criptografia](#criptografia)
+  - [Tipos de Criptografia](#tipos-de-criptografia)
 
 ## Problematização
 
@@ -50,7 +52,7 @@
   - SDN, 5G
   - Smart Cities
 
-## Pilares da Segurança
+## Pilares da Segurança da Informação
 
 - Estados da Informação
   - Transmissão
@@ -66,3 +68,75 @@
   - Conscientização
 
 &emsp; As informações estão em diversos locais e a segurança depende de múltiplos fatores. Imagine cada **Pilar de Segurança** sendo uma face de um cubo.
+
+- CID [5]
+  - **Confidencialidade**: visa impedir a leitura não autorizada de informações.
+  - **Integridade**: se dá, caso uma escrita não autorizada for proibida.
+  - **Disponibilidade**: fazer com que os sistemas estejam sempre disponíveis ao usuário.
+- Segundo [5]
+  - **Criptologia**: é a arte e a ciência de fazer e quebrar "códigos secretos".
+  - A **Criptografia** é a criação de "códigos secretos".
+  - **Criptoanálise** é a ruptura de "códigos secretos".
+
+## Criptografia
+
+&emsp; De acordo com [6]:
+
+- Teve origem no Egito, em meados de 1900 A.C.
+- Usado no Império Romano com a Cifra de César (substituição por _n_)
+- Disco de Cifra - Início da Mecanização de Cifragem
+  - Século XV: italiano Leon Battista Alberti (1404-1472) com dois cilindros para implementar a Cifra de César
+  - Século XVIII: cilindro de Jefferson (Thomas Jefferson) com 36 discos implementando uma cifra de substituição polialfabética.
+  - Cifra polialfabética consiste em usar uma tabela 26x26 que cria 26 alfabetos.
+- Em 1918, Arthur Scherbius patenteou a máquina de criptografia denominada Enigma. [Vídeo de explicação](https://www.youtube.com/watch?v=mdSvGUd0_c).
+  - Baseada no Princípio de Kerchhoff
+- Em 1949, Claude Shannon criou a Teoria Matemática da Comunicação ([link de vídeo](https://www.youtube.com/watch?v=yIEnE-jfI54)).
+- Em 1972: DES (Data Encryption Standard)
+- Década de 90: AES (Advanced Encryption Standard).
+
+```js
+plain_text = [a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
+
+cipher_text = [D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z, A, B, C]
+```
+
+<p align="right" class="legenda">
+  <ins><i>Cifra de César com n = 3</i></ins>
+</p>
+
+## Tipos de Criptografia
+
+- **Simétrica**: só uma chave é compartilhada entre origem e destino. Exemplos:
+  - RC4
+  - A5/1
+  - DES (3DES)
+  - AES
+- **Assimétrica** ou **Criptografia de Chaves**: um par de chaves é trocado, uma para cifrar (pública) e outra diferente para decifrar (privada). Exemplos:
+  - RSA
+  - Curvas Elípticas
+
+&emsp; Exemplos de Tipos de Criptografia:
+
+```txt
+1. Mensagem original enviada
+2. Algoritmo de criptografar (Chave Secreta Compartilhada)
+3. Texto Cifrado (Meio Seguro)
+4. Algoritmo de descriptografar (Chave Secreta Compartilhada)
+5. Mensagem original recebida
+```
+
+<p align="right" class="legenda">
+  <ins><i>Criptografia Simétrica</i></ins>
+</p>
+
+```txt
+1. Mensagem original enviada
+2. Algoritmo para criptografar (Chave Pública)
+3. Texto cifrado
+4. Algoritmo para descriptografar (Chave Privada)
+5. Mensagem original recebida
+```
+
+<p align="right" class="legenda">
+  <ins><i>Criptografia Assimétrica</i></ins>
+</p>
