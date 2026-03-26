@@ -1,6 +1,6 @@
 # Apresentação da Disciplina
 
-- Arquivo da [aula 01](https://drive.google.com/file/d/18R47Vy-GQOJOcG-okRzwtu3C6v52VZQm/view?usp=sharing).
+- Arquivo da [aula 01]().
 - Data da Postagem: 11/03/2026
 
 ## Tópicos
@@ -72,7 +72,7 @@
     2.  DNS
     3.  SSH
 
-# Critérios de Avaliação
+## Critérios de Avaliação
 
 &emsp; Quatro avaliações:
 

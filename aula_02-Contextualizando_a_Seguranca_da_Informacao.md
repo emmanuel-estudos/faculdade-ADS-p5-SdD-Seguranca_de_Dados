@@ -1,6 +1,6 @@
 # Contextualização a Segurança da Informação
 
-- Arquivo da [aula 02](https://drive.google.com/file/d/1u6l8_qFh2uO7lvJyLswK4qXnUlaxKX_q/view?usp=sharing).
+- Arquivo da [aula 02]().
 - Data de Postagem: 12/03/2026
 
 ## Sumário
@@ -178,3 +178,27 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 > "Qualquer evento adverso, confirmado ou sob suspeita, relacionado à segurança dos sistemas de computação ou das redes de computadores".
 >
 > "O ato de violar uma política de segurança, explícita e implícita".
+
+![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](output/Grafico_de_Incidentes.png)
+
+<p align="right" class="legenda">
+  <ins><i>Incidentes de Segurança reportados entre 2012 e 2023.</i></ins>
+</p>
+
+![Gráfico de Notificações sobre Equipamentos participando de ataques DoS](output/Equipamentos_em_ataques_DoS.png)
+
+<p align="right" class="legenda">
+  <ins><i>Equipamentos participando de Ataques DoS.</i></ins>
+</p>
+
+![Gráfico sobre "Incidentes Notificados ao CERT.br -- Janeiro/2023 a Junho/2023"](output/Incidentes-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Categorias de Incidentes Notificados (CERT.br) - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+![Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023"](output/Portas_mais_Atacadas-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Portas mais Atacadas - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
