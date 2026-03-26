@@ -42,12 +42,13 @@
 
 # Segurança de Dados
 
-> **Última sincronização:** 26/03/2026 00:06:22
+> **Última sincronização:** 26/03/2026 10:59:26
 
 ## Sumário de Aulas
 
 - Aula 01 - [Apresentação da Disciplina](#apresentação-da-disciplina)
 - Aula 02 - [Contextualização a Segurança da Informação](#contextualização-a-segurança-da-informação)
+- Aula 04 - [Criptografia de Chave Simétrica](#criptografia-de-chave-simétrica)
 
 ---
 
@@ -339,6 +340,43 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 <p align="right" class="legenda">
   <ins><i>Portas mais Atacadas - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
+
+![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Malwares-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Malwares reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Phishings-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Phishings reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](output/Top10-paises_IP_ataque.png)
+
+<p align="right" class="legenda">
+  <ins><i>Top10 países que possuem mais origem de endereços de IP de varredura.</i></ins>
+</p>
+
+![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](output/Paginas_Falsas-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Quantidade de Páginas Falsas - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+
+---
+
+## Criptografia de Chave Simétrica
+
+- Aula: 26/03/2026
+
+### Tópicos
+
+- [Criptografia de Chave Simétrica](#criptografia-de-chave-simétrica)
+  - [Tópicos](#tópicos)
+
 
 
 ---

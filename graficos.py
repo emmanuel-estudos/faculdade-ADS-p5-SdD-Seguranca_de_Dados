@@ -60,17 +60,77 @@ try:
     # )
 
     # Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023" (aula 02)
-    dados_grafico4 = {
-        'Porta': ['22/tcp', '25/tcp', 'multi/tcp', '23/tcp', '143/tcp', '23/tcp, 37215/tcp, 60023/tcp', '445/tcp', '1433/tcp', '445/tcp, 1433/tcp', '2375/tcp, 2376/tcp', 'Outros'],
-        'Quantidade': [36371, 31080, 23737, 16847, 16381, 11413, 10431, 9463, 6119, 4668, 62797]
+    # dados_grafico4 = {
+    #     'Porta': ['22/tcp', '25/tcp', 'multi/tcp', '23/tcp', '143/tcp', '23/tcp, 37215/tcp, 60023/tcp', '445/tcp', '1433/tcp', '445/tcp, 1433/tcp', '2375/tcp, 2376/tcp', 'Outros'],
+    #     'Quantidade': [36371, 31080, 23737, 16847, 16381, 11413, 10431, 9463, 6119, 4668, 62797]
+    # }
+
+    # gerar_grafico_h (
+    #     dados=dados_grafico4,
+    #     coluna_x='Quantidade',
+    #     coluna_y='Porta',
+    #     titulo='Portas mais Atacadas -- Janeiro/2023 a Junho/2023',
+    #     nome_arquivo='Portas_mais_Atacadas-Janeiro_Junho_2023.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"
+    # dados_grafico5 = {
+    #     'Mês': ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+    #     'Malware': [65, 79, 43, 43, 62, 50]
+    # }
+
+    # gerar_grafico_h (
+    #     dados=dados_grafico5,
+    #     coluna_x='Malware',
+    #     coluna_y='Mês',
+    #     titulo='Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023',
+    #     nome_arquivo='Malwares-Janeiro_Junho_2023.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"
+    # dados_grafico6 = {
+    #     'Mês': ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+    #     'Phishing': [2778, 2431, 2944, 2626, 3569, 2764]
+    # }
+
+    # gerar_grafico_h (
+    #     dados=dados_grafico6,
+    #     coluna_x='Phishing',
+    #     coluna_y='Mês',
+    #     titulo='Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023',
+    #     nome_arquivo='Phishings-Janeiro_Junho_2023.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"
+    # dados_grafico7 = {
+    #     'País': ['Brasil (BR)', 'China (CN)', 'Estados Unidos (US)', 'Coreia do Sul (KR)', 'Taiwan (TW)', 'Hong Kong (HK)', 'Rússia (RU)', 'Índia (IN)', 'Países Baixos (NL)', 'Vietnã (VN)'],
+    #     'Incidentes': [178984, 40966, 31091, 11943, 10751, 5828, 5270, 3719, 3334, 2886]
+    # }
+
+    # gerar_grafico_h (
+    #     dados=dados_grafico7,
+    #     coluna_x='Incidentes',
+    #     coluna_y='País',
+    #     titulo='Top10 Países com mais endereços IPs de Varredura de Ataque',
+    #     nome_arquivo='Top10-paises_IP_ataque.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"
+    dados_grafico8 = {
+        'Categoria': ['Financeiro', 'Webmail Corporativo', 'Varejo', 'Fidelidade', 'Serviços de Nuvem', 'Governo', 'Pagamento', 'Provedor', 'Redes Sociais', 'Criptomoeda', 'Seguro e Saúde', 'Infra de Nuvem', 'Outras'],
+        'Quantidade': [3950, 1030, 642, 604, 306, 192, 128, 102, 77, 45, 5, 4, 14]
     }
 
     gerar_grafico_h (
-        dados=dados_grafico4,
+        dados=dados_grafico8,
         coluna_x='Quantidade',
-        coluna_y='Porta',
-        titulo='Portas mais Atacadas -- Janeiro/2023 a Junho/2023',
-        nome_arquivo='Portas_mais_Atacadas-Janeiro_Junho_2023.png',
+        coluna_y='Categoria',
+        titulo='Páginas Falsas - Janeiro até Junho de 2023',
+        nome_arquivo='Paginas_Falsas-Janeiro_Junho_2023.png',
         caminho_base=diretorio_atual
     )
 

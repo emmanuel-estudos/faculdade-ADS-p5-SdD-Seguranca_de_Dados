@@ -202,3 +202,27 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 <p align="right" class="legenda">
   <ins><i>Portas mais Atacadas - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
+
+![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Malwares-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Malwares reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Phishings-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Phishings reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](output/Top10-paises_IP_ataque.png)
+
+<p align="right" class="legenda">
+  <ins><i>Top10 países que possuem mais origem de endereços de IP de varredura.</i></ins>
+</p>
+
+![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](output/Paginas_Falsas-Janeiro_Junho_2023.png)
+
+<p align="right" class="legenda">
+  <ins><i>Quantidade de Páginas Falsas - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
