@@ -12,7 +12,7 @@ if caminho_wiki not in sys.path:
     sys.path.append(caminho_wiki)
 
 try:
-    from gerador_graficos import gerar_grafico_h
+    from gerador_graficos import gerar_grafico_horizontal, gerar_grafico_vertical, gerar_grafico_linhas_duplas, gerar_grafico_linhas_multiplas, gerar_grafico_pizza
 
     # Gráfico sobre "Notificações de Incidentes recebidas pelo CERT.br" (aula 02)
     # dados_grafico1 = {
@@ -20,7 +20,7 @@ try:
     #     'Total Incidentes': [466029, 352925, 1047031, 722205, 618343, 788674, 637443, 774850, 531039, 457270, 481652, 333905]
     # }
 
-    # gerar_grafico_h(
+    # gerar_grafico_horizontal(
     #     dados=dados_grafico1,
     #     coluna_x='Total Incidentes',
     #     coluna_y='Ano',
@@ -35,7 +35,7 @@ try:
     #     'Equipamentos': [309, 1030, 223935, 25360, 60432, 220188, 158407, 301308, 68200, 72730, 70517, 39821]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico2,
     #     coluna_x='Equipamentos',
     #     coluna_y='Ano',
@@ -50,7 +50,7 @@ try:
     #     'Quantidade': [229307, 39821, 17454, 4163, 658, 42502]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico3,
     #     coluna_x='Quantidade',
     #     coluna_y='Categorias',
@@ -65,7 +65,7 @@ try:
     #     'Quantidade': [36371, 31080, 23737, 16847, 16381, 11413, 10431, 9463, 6119, 4668, 62797]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico4,
     #     coluna_x='Quantidade',
     #     coluna_y='Porta',
@@ -80,7 +80,7 @@ try:
     #     'Malware': [65, 79, 43, 43, 62, 50]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico5,
     #     coluna_x='Malware',
     #     coluna_y='Mês',
@@ -95,7 +95,7 @@ try:
     #     'Phishing': [2778, 2431, 2944, 2626, 3569, 2764]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico6,
     #     coluna_x='Phishing',
     #     coluna_y='Mês',
@@ -110,7 +110,7 @@ try:
     #     'Incidentes': [178984, 40966, 31091, 11943, 10751, 5828, 5270, 3719, 3334, 2886]
     # }
 
-    # gerar_grafico_h (
+    # gerar_grafico_horizontal (
     #     dados=dados_grafico7,
     #     coluna_x='Incidentes',
     #     coluna_y='País',
@@ -120,17 +120,47 @@ try:
     # )
 
     # Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"
-    dados_grafico8 = {
-        'Categoria': ['Financeiro', 'Webmail Corporativo', 'Varejo', 'Fidelidade', 'Serviços de Nuvem', 'Governo', 'Pagamento', 'Provedor', 'Redes Sociais', 'Criptomoeda', 'Seguro e Saúde', 'Infra de Nuvem', 'Outras'],
-        'Quantidade': [3950, 1030, 642, 604, 306, 192, 128, 102, 77, 45, 5, 4, 14]
-    }
+    # dados_grafico8 = {
+    #     'Categoria': ['Financeiro', 'Webmail Corporativo', 'Varejo', 'Fidelidade', 'Serviços de Nuvem', 'Governo', 'Pagamento', 'Provedor', 'Redes Sociais', 'Criptomoeda', 'Seguro e Saúde', 'Infra de Nuvem', 'Outras'],
+    #     'Quantidade': [3950, 1030, 642, 604, 306, 192, 128, 102, 77, 45, 5, 4, 14]
+    # }
 
-    gerar_grafico_h (
-        dados=dados_grafico8,
-        coluna_x='Quantidade',
-        coluna_y='Categoria',
-        titulo='Páginas Falsas - Janeiro até Junho de 2023',
-        nome_arquivo='Paginas_Falsas-Janeiro_Junho_2023.png',
+    # gerar_grafico_horizontal (
+    #     dados=dados_grafico8,
+    #     coluna_x='Quantidade',
+    #     coluna_y='Categoria',
+    #     titulo='Páginas Falsas - Janeiro até Junho de 2023',
+    #     nome_arquivo='Paginas_Falsas-Janeiro_Junho_2023.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Spams Reportados ao CERT.br por Ano -- 2012 até 2023"
+    # dados_grafico11 = {
+    #     'Ano': [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012],
+    #     'SpamCap': [26063, 44012, 43770, 65485, 61899, 78679, 180643, 312018, 144267, 250392, 283923, 626312]
+    # }
+
+    # gerar_grafico_horizontal (
+    #     dados=dados_grafico11,
+    #     coluna_x='SpamCap',
+    #     coluna_y='Ano',
+    #     titulo='Spams Reportados ao CERT.br por Ano -- 2012 até 2023',
+    #     nome_arquivo='Spams_Reportados_por_Ano.png',
+    #     caminho_base=diretorio_atual
+    # )
+
+    # Gráfico sobre "Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023"
+    dados_graficoXX = {
+      'ColunaX': ['nome', 2012],
+      'ColunaY': [2011, 2012]
+    }
+    
+    gerar_grafico_horizontal (
+        dados=dados_graficoXX,
+        coluna_x='ColunaX',
+        coluna_y='ColunaY',
+        titulo='',
+        nome_arquivo='.png',
         caminho_base=diretorio_atual
     )
 

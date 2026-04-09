@@ -15,6 +15,9 @@
   - [Controle de Acesso](#controle-de-acesso)
   - [CERT.BR](#certbr)
   - [Incidentes de Segurança](#incidentes-de-segurança)
+  - [Estatísticas de Ataques de Amplificação](#estatísticas-de-ataques-de-amplificação)
+  - [Estatísticas de DNS maliciosos](#estatísticas-de-dns-maliciosos)
+  - [Estatísticas de SPAM](#estatísticas-de-spam)
 
 ## Problematização
 
@@ -225,4 +228,45 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 <p align="right" class="legenda">
   <ins><i>Quantidade de Páginas Falsas - Janeiro/2023 até Junho/2023.</i></ins>
+</p>
+
+&emsp; gráficos de pizza
+
+## Estatísticas de Ataques de Amplificação
+
+&emsp; Os administradores de sistemas autônomos brasileiros (ASN) são notificados regularmente pelo CERT.br, cujas redes possuam sistema mal configurados que possam ser abusados para a realização de ataques de negação de serviço, com o objetivo de reduzir o número de redes brasileiras passíveis de serem abusadas para a realização de ataques DDoS.
+
+&emsp; INSERIR **``Gráfico de Notificações de endereços de IP com serviços permitindo amplificação - (agosto/2022 até julho/2023)``**
+
+## Estatísticas de DNS maliciosos
+
+&emsp; É **definido** como `servidor DNS malicioso` aquele que está fornecendo respostas incorretas para nome(s) de domínio(s) de instituições vítima. Em geral, instituições financeiras, de comércio eletrônico, redes sociais e/ou domínios bastantes conhecidos.
+
+&emsp; Seu **propósito** é direcionar os usuários para sites falsos, como parte de ataques de pharming.
+
+&emsp; São **instalados**, em sua maioria, pelo próprio atacante contratando serviços de hospedagem ou de nuvem.
+
+&emsp; O CERT.br notifica regularmente os ASNs que hospedam esses servidores, solicitando que sejam aplicadas as políticas adequadas para que o serviço seja retirando do ar.
+
+&emsp; INSERIR **``Gráfico de Servidores DNS maliciosos no Brasil e fora do Brasil (ativos por dia) - (agosto/2021 até agosto/2023)``**
+
+> ### ATENÇÃO
+>
+> &emsp; Estas estatísticas são **relativas** a servidores DNS maliciosos (rogue) sendo usados para **sequestro de DNS (DNS Hijacking)**. Ou seja, um servidor:
+>
+> * autoritativa para os domínios das vítimas
+> * recursivo aberto, para resposta às demais consultas
+>
+> &emsp; Estas estatísticas:
+>
+> * <spam style="color: red">não são</spam> de DNS invadidos;
+> * <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
+> * <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
+
+## Estatísticas de SPAM
+
+![Gráfico de Spams Reportador ao CERT.br por Ano - 2012 até 2023](output/Spams_Reportados_por_Ano.png)
+
+<p align="right" class="legenda">
+  <ins><i>Gráfico de Spams Reportador ao CERT.br por Ano - 2012 até 2023</i></ins>
 </p>
