@@ -150,17 +150,18 @@ try:
     # )
 
     # Gráfico sobre "Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023"
-    dados_graficoXX = {
-      'ColunaX': ['nome', 2012],
-      'ColunaY': [2011, 2012]
+    # Gráfico sobre "Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023"
+    dados_grafico12 = {
+      'Ano': [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012],
+      'Totais': [292692, 674535, 586882, 863459, 806021, 497066, 650292, 791740, 711467, 735262, 993088, 1731842]
     }
     
     gerar_grafico_horizontal (
-        dados=dados_graficoXX,
-        coluna_x='ColunaX',
-        coluna_y='ColunaY',
-        titulo='',
-        nome_arquivo='.png',
+        dados=dados_grafico12,
+        coluna_x='Totais',
+        coluna_y='Ano',
+        titulo='"Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023"',
+        nome_arquivo='Total_Spams_Reportados_por_Ano.png',
         caminho_base=diretorio_atual
     )
 

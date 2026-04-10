@@ -18,6 +18,10 @@
   - [Estatísticas de Ataques de Amplificação](#estatísticas-de-ataques-de-amplificação)
   - [Estatísticas de DNS maliciosos](#estatísticas-de-dns-maliciosos)
   - [Estatísticas de SPAM](#estatísticas-de-spam)
+  - [Incidentes de Segurança](#incidentes-de-segurança-1)
+  - [As 20 Portas TCP que mais sofreram varreduras em 2020](#as-20-portas-tcp-que-mais-sofreram-varreduras-em-2020)
+  - [Scan por Porta](#scan-por-porta)
+  - [Ataques por Número de Sistema Autônomo (ASN)](#ataques-por-número-de-sistema-autônomo-asn)
 
 ## Problematização
 
@@ -270,3 +274,31 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 <p align="right" class="legenda">
   <ins><i>Gráfico de Spams Reportador ao CERT.br por Ano - 2012 até 2023</i></ins>
 </p>
+
+![Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023](output/Total_Spams_Reportados_por_Ano.png)
+
+<p align="right" class="legenda">
+  <ins><i>Total de Spams Reportados ao CERT.br por Ano -- 2012 até 2023</i></ins>
+</p>
+
+## Incidentes de Segurança
+
+&emsp; INSERIR **``Gráfico sobre Incidentes Reportados ao CERT.br -- 2020 (Tipos de Ataque)``**
+
+
+
+## As 20 Portas TCP que mais sofreram varreduras em 2020
+
+&emsp; As varreduras pelas portas TCP 23, 22, 81, 5555, 8000 e 8080 estão todas relacionadas com atividades de propagação de botnets de IoT, como a Mirai e suas variantes e a Bashlite e suas variantes. Os ataques nessas portas são tentativas de força bruta de credenciais ou tentativas de explorar vulnerabilidades nas interfaces de gerência de roteadores de banda larga ou de Wi-Fi.
+
+&emsp; As portas que mais tiveram aumento de varreduras de 2019 para 2020 foram, na ordem de variação: 3389/TCP - 118%, 21/TCP - 101%, 1433/TCP - 85% e 23/TCP - 65%.
+
+&emsp; Outro fato interessante é a continuidade da procura por serviços relacionados com e-mail, mais notadamente as portas POP3 (110/TCP), SMTPS (465/TCP). Este comportamento pode ser relacionado com o aumento de força bruta em serviços de e-mail que temos visto nas notificações de incidentes de segurança recebidas pelo CERT.br.
+
+## Scan por Porta
+
+&emsp; INSERIR **``Gráfico sobre Incidentes Reportados ao CERT.br -- 2020 (Scan reportados, por porta)``**
+
+## Ataques por Número de Sistema Autônomo (ASN)
+
+&emsp; INSERIR **``Gráfico sobre Incidentes Reportados ao CERT.br -- 2020 (Top 10 ASNs origem de ataques)``**
