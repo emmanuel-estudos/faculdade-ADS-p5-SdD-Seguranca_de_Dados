@@ -1,9 +1,148 @@
-# Contextualização a Segurança da Informação
+<style>
+    /* Reiniciando a Contagem Geral */
+    body {
+        counter-reset: contadorh1 1 contadorLegenda 0;
+    }
+
+    /* Aplica o estilo para H1 e informa que a contagem de H2 deve começar do 0 sempre que um H1 aparecer */
+    h1 {
+        counter-reset: contadorh2;
+        text-align: center;
+    }
+
+    h1::before {
+        counter-increment: contadorh1;
+    }
+
+    /* Aplica o estilo para H2 e informa que a contagem de H3 deve começar do 0 sempre que um H2 aparecer */
+    h2 {
+        counter-reset: contadorh3;
+    }
+
+    h2::before {
+        counter-increment: contadorh2;
+        content: counter(contadorh2) ". ";
+    }
+
+    /* Aplica estilo para H3 */
+    h3::before {
+        counter-increment: contadorh3;
+        content: counter(contadorh2) "." counter(contadorh3) ". ";
+    }
+
+    /* Legendas */
+    .legenda::before {
+    /* Incrementa o contador toda vez que a classe aparece */
+    counter-increment: contadorLegenda;
+    /* Define o texto automático */
+    content: "Figura " counter(contadorLegenda) ": ";
+    font-weight: bold;
+}
+</style>
+
+# Segurança de Dados
+
+> **Última sincronização:** 12/04/2026 17:41:42
+
+## Sumário de Aulas
+
+- Aula 01 - [Apresentação da Disciplina](#apresentação-da-disciplina)
+- Aula 02 - [Contextualização a Segurança da Informação](#contextualização-a-segurança-da-informação)
+- Aula 04 - [Criptografia de Chave Simétrica](#criptografia-de-chave-simétrica)
+- Aula 07 - [Título não encontrado](#título-não-encontrado)
+
+---
+
+## Apresentação da Disciplina
+
+- Arquivo da [aula 01]().
+- Data da Postagem: 11/03/2026
+
+### Tópicos
+
+- Apresentação do Professor
+- Experiência Profissional
+- [Dados Gerais](#dados-gerais)
+- As redes de Computadores
+  - Breve Histórico
+- Motivação da Disciplina
+- Objetivo Geral
+- Objetivos Específicos
+- Ementa
+- [Conteúdo Programático](#conteúdo-programático)
+- [Avaliações](#critérios-de-avaliação)
+- Bibliografia
+
+### Dados Gerais
+
+- Carga Horária (CH): 120h
+- Aulas
+  - Quintas: 09:45 - 11:25 (últimas duas aulas)
+  - Sexta: 07:00 - 08:40 (primeiras duas aulas)
+  - Local: Laboratório de Informática 06
+- Número de Avaliações: 4
+
+### Conteúdo Programático
+
+1. Histórico e Motivação para uso das redes de computadores
+2. Topologias físicas e lógicas de redes de computadores
+3. Transmissão da Informação
+   1. Sinais: analógico e digital
+   2. Fontes de Distorção nos Enlaces
+   3. Teoremas de Nyquist e Shannon
+   4. Multiplexação e seus tipos
+4. Comunicação e seus tipos
+5. Meios de transmissão: com e sem fio
+6. Introdução à Arquitetura de Redes
+7. O Modelo RM-OSI
+   1. Motivação
+   2. Camadas e suas funções
+8. Confeccionando cabos de rede (par traçado UTP 5e) - Prática
+9. O Padrão IEEE 802
+   1.  Motivação
+   2.  Camadas e suas funções
+   3.  Comparação com o RM-OSI
+   4.  Padrões
+10. Arquitetura TCP/IP
+    1.  Camadas e suas funções
+    2.  Comparação com o RM-OSI e IEEE 802
+    3.  Camadas: Protocolos e suas funções
+11. Internet ou Inter-Rede
+    1.  Endereçamento IP
+    2.  Datagrama IP
+    3.  ARP e RARP
+    4.  NAT
+12. Redes Virtuais e Software-Defined Networks (SDN)
+    1.  Montagem e Avaliação
+    2.  Controladores e Simulador SDN (Mininet)
+    3.  Protocolos de Tunelamento em SDN com Prática
+13. Transporte
+    1.  TCP
+    2.  Cabeçalho
+    3.  Algoritmos de Controle de Congestionamento
+    4.  UDP
+    5.  SCTP
+14. Aplicação
+    1.  HTTPS
+    2.  DNS
+    3.  SSH
+
+### Critérios de Avaliação
+
+&emsp; Quatro avaliações:
+
+- 2 provas subjetivas(s)/objetiva(s)
+- 1 prática
+- 1 seminário com apresentação de artigos científicos
+
+---
+
+## Contextualização a Segurança da Informação
 
 - Arquivo da [aula 02]().
 - Data de Postagem: 12/03/2026
 
-## Sumário
+### Sumário
 
 - [Contextualização a Segurança da Informação](#contextualização-a-segurança-da-informação)
   - [Sumário](#sumário)
@@ -28,11 +167,11 @@
   - [Reflexão](#reflexão)
   - [Referências](#referências)
 
-## Problematização
+### Problematização
 
 &emsp; As informações são os bens mais preciosos que possuímos hoje em dia, por isso veremos um dos principais focos das empresas que é a **Segurança de Dados** e como ela pode proteger esse bem tão precioso que temos.
 
-## Evolução da Segurança da Informação
+### Evolução da Segurança da Informação
 
 - 1940 - Mark I
   - Aplicação: Otimizar a trajetória dos mísseis
@@ -67,7 +206,7 @@
   - SDN, 5G
   - Smart Cities
 
-## Pilares da Segurança da Informação
+### Pilares da Segurança da Informação
 
 - Estados da Informação
   - Transmissão
@@ -93,7 +232,7 @@
   - A **Criptografia** é a criação de "códigos secretos".
   - **Criptoanálise** é a ruptura de "códigos secretos".
 
-## Criptografia
+### Criptografia
 
 &emsp; De acordo com [6]:
 
@@ -119,7 +258,7 @@ cipher_text = [D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y,
   <ins><i>Cifra de César com n = 3</i></ins>
 </p>
 
-## Tipos de Criptografia
+### Tipos de Criptografia
 
 - **Simétrica**: só uma chave é compartilhada entre origem e destino. Exemplos:
   - RC4
@@ -156,7 +295,7 @@ cipher_text = [D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y,
   <ins><i>Criptografia Assimétrica</i></ins>
 </p>
 
-## Controle de Acesso
+### Controle de Acesso
 
 - **Autenticação**: forma de um usuário provar que ele é ele mesmo, através de provar:
   - Algo que você sabe (senha)
@@ -164,7 +303,7 @@ cipher_text = [D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y,
   - Algo que você é (biometria: leitor digital, leitor da íris e análise da palma da mão)
 - **Autorização**: após a autenticação, o usuário estará apto ao sistema, seguindo restrições impostas pelo mesmo
 
-## CERT.BR
+### CERT.BR
 
 > &emsp; Grupo de Resposta a Incidentes de Segurança para a Internet no Brasil. mantido pelo NIC.br, do Comitê Gestor da Internet no Brasil. É responsável por tratar incidentes de segurança em computadores que envolvam redes conectadas à Internet no Brasil.
 >
@@ -183,7 +322,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 > - IV - atender aos requisitos de segurança e emergências na Internet Brasileira em articulação e cooperação com as entidades e os órgãos responsáveis;
 > - VII - promover ou colaborar na realização de cursos, simpósios, seminários, conferências, feiras e congressos, visando contribuir para o desenvolvimento e aperfeiçoamento do ensino e dos conhecimentos nas áreas de suas especialidades.
 
-## Incidentes de Segurança
+### Incidentes de Segurança
 
 &emsp; Como afirma o CERT (Centro de Estudos, Resposta e Tratamento de Incidentes de Segurança no Brasil), em [5]:
 
@@ -309,13 +448,13 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
   <ins><i>Incidentes Reportados por Tipo -- Janeiro a Dezembro de 2020</i></ins>
 </p>
 
-## Estatísticas de Ataques de Amplificação
+### Estatísticas de Ataques de Amplificação
 
 &emsp; Os administradores de sistemas autônomos brasileiros (ASN) são notificados regularmente pelo CERT.br, cujas redes possuam sistema mal configurados que possam ser abusados para a realização de ataques de negação de serviço, com o objetivo de reduzir o número de redes brasileiras passíveis de serem abusadas para a realização de ataques DDoS.
 
 &emsp; INSERIR **``Gráfico de Notificações de endereços de IP com serviços permitindo amplificação - (agosto/2022 até julho/2023)``**
 
-## Estatísticas de DNS maliciosos
+### Estatísticas de DNS maliciosos
 
 &emsp; É **definido** como `servidor DNS malicioso` aquele que está fornecendo respostas incorretas para nome(s) de domínio(s) de instituições vítima. Em geral, instituições financeiras, de comércio eletrônico, redes sociais e/ou domínios bastantes conhecidos.
 
@@ -340,7 +479,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 > * <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
 > * <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
 
-## Estatísticas de SPAM
+### Estatísticas de SPAM
 
 ![Gráfico de Spams Reportador ao CERT.br por Ano -- 2012 até 2023](../output/aula02-g20-slide34.png)
 
@@ -348,7 +487,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
   <ins><i>Gráfico de Spams Reportador ao CERT.br por Ano -- 2012 até 2023</i></ins>
 </p>
 
-## As 20 Portas TCP que mais sofreram varreduras em 2020
+### As 20 Portas TCP que mais sofreram varreduras em 2020
 
 &emsp; As varreduras pelas portas TCP 23, 22, 81, 5555, 8000 e 8080 estão todas relacionadas com atividades de propagação de botnets de IoT, como a Mirai e suas variantes e a Bashlite e suas variantes. Os ataques nessas portas são tentativas de força bruta de credenciais ou tentativas de explorar vulnerabilidades nas interfaces de gerência de roteadores de banda larga ou de Wi-Fi.
 
@@ -356,7 +495,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 &emsp; Outro fato interessante é a continuidade da procura por serviços relacionados com e-mail, mais notadamente as portas POP3 (110/TCP), SMTPS (465/TCP). Este comportamento pode ser relacionado com o aumento de força bruta em serviços de e-mail que temos visto nas notificações de incidentes de segurança recebidas pelo CERT.br.
 
-## Ataques por Número de Sistema Autônomo (ASN)
+### Ataques por Número de Sistema Autônomo (ASN)
 
 ![Top10 de ASNs Origem de Ataques -- 2020](../output/aula02-g22-slide38.png)
 
@@ -364,7 +503,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
   <ins><i>Top10 de ASNs Origem de Ataques -- 2020</i></ins>
 </p>
 
-## Ataques a Servidores Web
+### Ataques a Servidores Web
 
 &emsp; A maioria absoluta das falhas de segurança nos sistemas desktop e web são por falha de programação:
 
@@ -373,20 +512,20 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 &emsp; Como a segurança está sempre em último plano os testes de segurança são realizados depois dos lançamentos dos produtos, gerando uma série de atualizações
 
-## Nomas ISO
+### Nomas ISO
 
 - **ISO 27001** - Técnicas de segurança — Sistemas de gestão de segurança da informação — Requisitos
 - **ISO 27002** – Técnicas de Segurança: Código de práticas para a gestão de segurança da informação
 
-## Recomendações Mercadológicas
+### Recomendações Mercadológicas
 
-### COBIT: Control Objectives for Information and related Technology
+#### COBIT: Control Objectives for Information and related Technology
 
 &emsp; É um guia de boas práticas apresentado como framework, dirigido para a gestão de tecnologia de informação (TI). 
 
 &emsp; Mantido pelo ISACA (Information Systems Audit and Control Association), possui uma série de recursos que podem servir como um modelo de referência para gestão da TI, incluindo um sumário executivo, **um framework, objetivos de controle, mapas de auditoria, ferramentas para a sua implementação e principalmente, um guia com técnicas de gerenciamento [6]**.
 
-### Information Technology Infrastructure Library (ITIL)
+#### Information Technology Infrastructure Library (ITIL)
 
 &emsp; É um conjunto de boas práticas a serem aplicadas na infraestrutura, operação e manutenção de serviços de tecnologia da informação (TI). Foi desenvolvido no final dos anos 1980 pela CCTA (Central Computer and Telecommunications Agency) e atualmente está sob custódia da OGC (Office for Government Commerce) da Inglaterra.
 
@@ -394,12 +533,12 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 &emsp; ITIL dá uma descrição detalhada sobre importantes práticas de IT com checklists, tarefas e procedimentos que uma organização de IT pode customizar para suas necessidades [7]
 
-## Reflexão
+### Reflexão
 
 > “É um fato bem conhecido que nenhuma outra parte da população recorre mais facilmente e rapidamente, aos mais recentes triunfos da ciência, do que a classe criminosa”.
 > Inspetor John Bofield – Chicago Herald, 1888 [8].
 
-## Referências
+### Referências
 
 - [1] LEINER, Barry M.; KAHN, Robert E.; POSTEL, John; CERF, Vinton G.; KLEINROCK, Leonard; ROBERTS, Larry G.; Clark, David. D.; LYNCH, Daniel C.; WOLFF, Stephen. A Brief History of the Internet, Volume 39, Number 5, ACM SIGCOMM Computer Communication Review, October 2009.
 - [2] Wikipedia: História da Internet. Documentação online. Disponível na URL: http://pt.wikipedia.org/wiki/Hist%C3%B3ria_da_Internet e acessado em 24 de Abril de 2012.
@@ -411,3 +550,24 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 - [8] STAMDAGE, TOM. The Victorian Internet: The Remarkable Story of the Telegraph and the Nineteenth Century's On-Line Pioneers, Walker & Company; 1st edition (September 18, 2007), ISBN-13: 978-0802716040.
 - [9] Estaơsticas do CERT.br – Disponível na URL: https://stats.cert.br/ e acessado em 15/08/2023
 - Prof. Francisco DALADIER Marques JÚNIOR, PhD Instituto Federal de Educação, Ciência e Tecnologia da Paraíba (IFPB) - daladierjr@ifpb.edu.br
+
+
+---
+
+## Criptografia de Chave Simétrica
+
+- Aula: 26/03/2026
+
+### Tópicos
+
+- [Criptografia de Chave Simétrica](#criptografia-de-chave-simétrica)
+  - [Tópicos](#tópicos)
+
+
+
+---
+
+
+
+---
+
