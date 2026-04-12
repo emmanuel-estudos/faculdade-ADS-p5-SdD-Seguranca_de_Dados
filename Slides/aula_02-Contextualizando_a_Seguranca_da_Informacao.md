@@ -186,49 +186,49 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 >
 > "O ato de violar uma política de segurança, explícita e implícita".
 
-![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](output/Grafico_de_Incidentes.png)
+![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](../output/aula02-g1-slide20.png)
 
 <p align="right" class="legenda">
   <ins><i>Incidentes de Segurança reportados entre 2012 e 2023.</i></ins>
 </p>
 
-![Gráfico de Notificações sobre Equipamentos participando de ataques DoS](output/Equipamentos_em_ataques_DoS.png)
+![Gráfico de Notificações sobre Equipamentos participando de ataques DoS](../output/aula02-g2-slide21.png)
 
 <p align="right" class="legenda">
   <ins><i>Equipamentos participando de Ataques DoS.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes Notificados ao CERT.br -- Janeiro/2023 a Junho/2023"](output/Incidentes-Janeiro_Junho_2023.png)
+![Gráfico sobre "Incidentes Notificados ao CERT.br -- Janeiro/2023 a Junho/2023"](../output/aula02-g3-slide22.png)
 
 <p align="right" class="legenda">
   <ins><i>Categorias de Incidentes Notificados (CERT.br) - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023"](output/Portas_mais_Atacadas-Janeiro_Junho_2023.png)
+![Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023"](../output/aula02-g4-slide23.png)
 
 <p align="right" class="legenda">
   <ins><i>Portas mais Atacadas - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Malwares-Janeiro_Junho_2023.png)
+![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](../output/aula02-g5-slide24.png)
 
 <p align="right" class="legenda">
   <ins><i>Malwares reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/Phishings-Janeiro_Junho_2023.png)
+![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](../output/aula02-g6-slide24.png)
 
 <p align="right" class="legenda">
   <ins><i>Phishings reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](output/Top10-paises_IP_ataque.png)
+![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](../output/aula02-g7-slide25.png)
 
 <p align="right" class="legenda">
-  <ins><i>Top10 países que possuem mais origem de endereços de IP de varredura.</i></ins>
+  <ins><i>Top10 países que possuem mais origem de endereços de IP de varredura - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](output/Paginas_Falsas-Janeiro_Junho_2023.png)
+![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](../output/aula02-g8-slide26.png)
 
 <p align="right" class="legenda">
   <ins><i>Quantidade de Páginas Falsas - Janeiro/2023 até Junho/2023.</i></ins>
