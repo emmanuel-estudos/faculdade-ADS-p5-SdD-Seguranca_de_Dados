@@ -201,7 +201,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 - **Fraude**: segundo Houaiss, é "qualquer ato ardiloso, enganoso, de má-fé, com intuito de lesar ou ludibriar outrem, ou de não cumprir determinado dever; logro". Esta categoria engloba as notificações de tentativas de fraudes, ou seja, de incidentes em que ocorre uma tentativa de obter vantagem.
 - **Outros**: notificações de incidentes que não se enquadram nas categorias anteriores.
 
-![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](../output/aula02-g1-slide20.png)
+![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](../output/aula02-g01-slide28.png)
 
 <p align="right" class="legenda">
   <ins><i>Incidentes de Segurança reportados entre 2012 e 2023.</i></ins>

@@ -42,7 +42,7 @@
 
 # Segurança de Dados
 
-> **Última sincronização:** 12/04/2026 17:41:42
+> **Última sincronização:** 12/04/2026 18:14:32
 
 ## Sumário de Aulas
 
@@ -340,109 +340,109 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 - **Fraude**: segundo Houaiss, é "qualquer ato ardiloso, enganoso, de má-fé, com intuito de lesar ou ludibriar outrem, ou de não cumprir determinado dever; logro". Esta categoria engloba as notificações de tentativas de fraudes, ou seja, de incidentes em que ocorre uma tentativa de obter vantagem.
 - **Outros**: notificações de incidentes que não se enquadram nas categorias anteriores.
 
-![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](../output/aula02-g1-slide20.png)
+![Gráfico de Notificações de Incidentes recebidas por Ano pelo CERT.br](output/aula02-g01-slide28.png)
 
 <p align="right" class="legenda">
   <ins><i>Incidentes de Segurança reportados entre 2012 e 2023.</i></ins>
 </p>
 
-![Gráfico de Notificações sobre Equipamentos participando de ataques DoS](../output/aula02-g2-slide21.png)
+![Gráfico de Notificações sobre Equipamentos participando de ataques DoS](output/aula02-g2-slide21.png)
 
 <p align="right" class="legenda">
   <ins><i>Equipamentos participando de Ataques DoS.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes Notificados ao CERT.br -- Janeiro/2023 a Junho/2023"](../output/aula02-g3-slide22.png)
+![Gráfico sobre "Incidentes Notificados ao CERT.br -- Janeiro/2023 a Junho/2023"](output/aula02-g3-slide22.png)
 
 <p align="right" class="legenda">
   <ins><i>Categorias de Incidentes Notificados (CERT.br) - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023"](../output/aula02-g4-slide23.png)
+![Gráfico sobre "Portas que mais sofreram varreduras (scan) ou ataques sem sucesso -- Janeiro/2023 a Junho/2023"](output/aula02-g4-slide23.png)
 
 <p align="right" class="legenda">
   <ins><i>Portas mais Atacadas - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](../output/aula02-g5-slide24.png)
+![Gráfico sobre "Incidentes de MALWARE Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/aula02-g5-slide24.png)
 
 <p align="right" class="legenda">
   <ins><i>Malwares reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](../output/aula02-g6-slide24.png)
+![Gráfico sobre "Incidentes de PHISHING Notificados ao CERT.br -- Janeiro até Junho de 2023"](output/aula02-g6-slide24.png)
 
 <p align="right" class="legenda">
   <ins><i>Phishings reportados ao CERT.br - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](../output/aula02-g7-slide25.png)
+![Gráfico sobre "Top10 Países dos endereços IP de origem de varredura de ataque"](output/aula02-g7-slide25.png)
 
 <p align="right" class="legenda">
   <ins><i>Top10 países que possuem mais origem de endereços de IP de varredura - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](../output/aula02-g8-slide26.png)
+![Gráfico sobre "Páginas Falsas -- Janeiro até Junho de 2023"](output/aula02-g8-slide26.png)
 
 <p align="right" class="legenda">
   <ins><i>Quantidade de Páginas Falsas - Janeiro/2023 até Junho/2023.</i></ins>
 </p>
 
-![Categorias de Páginas Falsas que afetam Organizações no Exterior -- Janeiro a Junho de 2023.](../output/aula02-g09-slide27.png)
+![Categorias de Páginas Falsas que afetam Organizações no Exterior -- Janeiro a Junho de 2023.](output/aula02-g09-slide27.png)
 
 <p align="right" class="legenda">
   <ins><i>Categorias de Páginas Falsas que afetam Organizações no Exterior -- Janeiro a Junho de 2023.</i></ins>
 </p>
 
-![Países de Alocação de Endereços IP onde as Páginas Falsas estão Hospedados -- Janeiro a Junho de 2023](../output/aula02-g10-slide28.png)
+![Países de Alocação de Endereços IP onde as Páginas Falsas estão Hospedados -- Janeiro a Junho de 2023](output/aula02-g10-slide28.png)
 
 <p align="right" class="legenda">
   <ins><i>Países de Alocação de Endereços IP onde as Páginas Falsas estão Hospedados -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Sistemas Autônomos (AS) dos Endereços IP onde as Páginas estão Hospedadas -- Janeiro a Junho de 2023](../output/aula02-g11-slide29.png)
+![Sistemas Autônomos (AS) dos Endereços IP onde as Páginas estão Hospedadas -- Janeiro a Junho de 2023](output/aula02-g11-slide29.png)
 
 <p align="right" class="legenda">
   <ins><i>Sistemas Autônomos (AS) dos Endereços IP onde as Páginas estão Hospedadas -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023](../output/aula02-g12-slide30.png)
+![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023](output/aula02-g12-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023](../output/aula02-g13-slide30.png)
+![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023](output/aula02-g13-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023](../output/aula02-g14-slide30.png)
+![Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023](output/aula02-g14-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptime: AS13335 - CloudFlareNet, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023](../output/aula02-g15-slide30.png)
+![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023](output/aula02-g15-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - TOTAL -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023](../output/aula02-g16-slide30.png)
+![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023](output/aula02-g16-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - BRASIL -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023](../output/aula02-g17-slide30.png)
+![Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023](output/aula02-g17-slide30.png)
 
 <p align="right" class="legenda">
   <ins><i>Páginas Falsas - Uptimes: AS15169 - Google, Estados Unidos (US) - EXTERIOR -- Janeiro a Junho de 2023</i></ins>
 </p>
 
-![Incidentes Reportados por Tipo -- Janeiro a Dezembro de 2020](../output/aula02-g21-slide35.png)
+![Incidentes Reportados por Tipo -- Janeiro a Dezembro de 2020](output/aula02-g21-slide35.png)
 
 <p align="right" class="legenda">
   <ins><i>Incidentes Reportados por Tipo -- Janeiro a Dezembro de 2020</i></ins>
@@ -481,7 +481,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 ### Estatísticas de SPAM
 
-![Gráfico de Spams Reportador ao CERT.br por Ano -- 2012 até 2023](../output/aula02-g20-slide34.png)
+![Gráfico de Spams Reportador ao CERT.br por Ano -- 2012 até 2023](output/aula02-g20-slide34.png)
 
 <p align="right" class="legenda">
   <ins><i>Gráfico de Spams Reportador ao CERT.br por Ano -- 2012 até 2023</i></ins>
@@ -497,7 +497,7 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 ### Ataques por Número de Sistema Autônomo (ASN)
 
-![Top10 de ASNs Origem de Ataques -- 2020](../output/aula02-g22-slide38.png)
+![Top10 de ASNs Origem de Ataques -- 2020](output/aula02-g22-slide38.png)
 
 <p align="right" class="legenda">
   <ins><i>Top10 de ASNs Origem de Ataques -- 2020</i></ins>
