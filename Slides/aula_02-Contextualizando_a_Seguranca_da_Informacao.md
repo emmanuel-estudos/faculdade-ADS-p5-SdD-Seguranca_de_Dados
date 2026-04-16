@@ -17,6 +17,7 @@
   - [Incidentes de Segurança](#incidentes-de-segurança)
   - [Estatísticas de Ataques de Amplificação](#estatísticas-de-ataques-de-amplificação)
   - [Estatísticas de DNS maliciosos](#estatísticas-de-dns-maliciosos)
+    - [ATENÇÃO](#atenção)
   - [Estatísticas de SPAM](#estatísticas-de-spam)
   - [As 20 Portas TCP que mais sofreram varreduras em 2020](#as-20-portas-tcp-que-mais-sofreram-varreduras-em-2020)
   - [Ataques por Número de Sistema Autônomo (ASN)](#ataques-por-número-de-sistema-autônomo-asn)
@@ -327,18 +328,18 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 &emsp; INSERIR **``Gráfico de Servidores DNS maliciosos no Brasil e fora do Brasil (ativos por dia) - (agosto/2021 até agosto/2023)``**
 
-> ### ATENÇÃO
->
+### ATENÇÃO
+
 > &emsp; Estas estatísticas são **relativas** a servidores DNS maliciosos (rogue) sendo usados para **sequestro de DNS (DNS Hijacking)**. Ou seja, um servidor:
 >
-> * autoritativa para os domínios das vítimas
-> * recursivo aberto, para resposta às demais consultas
+> - autoritativa para os domínios das vítimas
+> - recursivo aberto, para resposta às demais consultas
 >
 > &emsp; Estas estatísticas:
 >
-> * <spam style="color: red">não são</spam> de DNS invadidos;
-> * <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
-> * <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
+> - <spam style="color: red">não são</spam> de DNS invadidos;
+> - <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
+> - <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
 
 ## Estatísticas de SPAM
 
