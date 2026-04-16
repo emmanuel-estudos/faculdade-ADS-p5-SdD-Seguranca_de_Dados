@@ -12,6 +12,8 @@
   - [Definição de Segurança](#definição-de-segurança)
   - [Cifra de Transposição Dupla](#cifra-de-transposição-dupla)
     - [Exemplo Prático](#exemplo-prático)
+  - [Preenchimento de um Bloco por Vez (One Time Pad)](#preenchimento-de-um-bloco-por-vez-one-time-pad)
+    - [Tabela XOR (ou Exclusivo)](#tabela-xor-ou-exclusivo)
 
 ## Introdução
 
@@ -190,3 +192,69 @@ $$
 
 &emsp; Ao contrário de uma substituição simples, a transposição dupla não faz nada para disfarçar as letras que aparecem na mensagem. Mas isso parece não impedir um ataque que se baseia em informações estatísticas contidas no texto original, uma vez que as estatísticas do texto plano são debruçadas ao longo do texto cifrado. A transposição dupla não é uma cifra trivial de quebrar. A ideia de informação de texto plano manchado com o texto cifrado é tão útil que é empregado por cifras de blocos modernas.
 
+## Preenchimento de um Bloco por Vez (One Time Pad)
+
+&emsp; Também conhecido como **Vernam**, é um sistema de encriptação comprovadamente seguro. Historicamente foi utilizada em vários momentos, mas não é muito prática para a maioria das situações. No entanto, ele serve para ilustrar alguns conceitos importantes.
+
+&emsp; Para simplificar, vamos considerar um alfabeto com apenas **oito letras**. O nosso alfabeto e a correspondente representação binária de letras são dadas na Tabela. É importante notar que o mapeamento entre as letras e os bits não é segredo. Esse mapeamento serve como um efeito similar com o código ASCII, que não é secreto.
+
+&emsp; Suponha que uma espiã chamada Alice quer criptografar a mensagem de texto plano: **heilhitler**.
+
+&emsp; Usando um bloco por vez, ela consulta a Tabela a seguir para converter as letras para uma string de bits: **001 000 010 100 001 010 111 100 000 101**.
+
+| Letra | Binário |
+| :---: | :------ |
+| e | 000 |
+| h | 001 |
+| i | 010 |
+| k | 011 |
+| l | 100 |
+| r | 101 |
+| s | 110 |
+| t | 111 |
+
+### Tabela XOR (ou Exclusivo)
+
+| x | y | z |
+| :-: | :-: | :-: |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+---------
+
+&emsp; Um bloco por vez exige uma chave que consiste de uma sequência de bits selecionados aleatoriamente que têm o **mesmo comprimento da mensagem**. A chave é então calculada com **XOR (ou exclusivo)** com o texto para produzir o texto cifrado.
+
+&emsp; Denotamos o bit XOR de x com o bit y, como x ⊕ y. Desde x ⊕ y ⊕ y = x. Logo, a decodificação é realizada também por XOR com a mesma chave do texto cifrado.
+
+| | h | e | i | l | h | i | t | l | e | r |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ciphertext** | 001 | 000 | 010 | 100 | 001 | 010 | 111 | 100 | 000 | 101 |
+| **key** | 111 | 101 | 110 | 101 | 111 | 100 | 000 | 101 | 110 | 000 | 
+| **plaintext** | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| | s | r | l | h | s | s | t | h | s | r |
+
+&emsp; Vamos considerar um par de cenários:
+
+> 1ª) Suponha que Alice tem um inimigo, Charlie, dentro de sua organização de espionagem. Charlie afirma que a chave real usada para criptografar mensagens de Alice é: **101 111 000 101 111 100 000 101 110 000**.
+
+&emsp; Quando Bob decifra o texto cifrado usando essa chave, ele encontrará:
+
+| | h | e | i | l | h | i | t | l | e | r |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ciphertext** | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| **key** | 101 | 111 | 000 | 101 | 111 | 100 | 000 | 101 | 110 | 000 | 
+| **plaintext** | 011 | 010 | 100 | 100 | 001 | 010 | 111 | 100 | 000 | 101 |
+| | k | i | l | l | h | i | t | h | e | r |
+
+> 2ª) Suponha que Alice é capturada por seus inimigos, que também interceptaram o texto cifrado. Os sequestradores estão ansiosos para ler a mensagem, e Alice é incentivada a fornecer a chave para esta mensagem “secreta”. Alice alega que ela é na verdade um agente duplo e para provar que é, ela afirma que a chave é: **111 101 000 011 101 110 001 011 101 101**.
+
+&emsp; Quando os captores de Alice "decifrarem" o texto cifrado usando esta chave, eles acham:
+
+| Mensagem Enviada | s | r | l | h | s | s | t | h | s | r |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ciphertext | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| key | 111 | 101 | 000 | 011 | 101 | 110 | 001 | 011 | 101 | 101 |
+| plaintext | 001 | 000 | 100 | 010 | 011 | 000 | 110 | 010 | 011 | 000 |
+| Mensagem Receida | H | E | L | I | K | E | S | I | K | E |
