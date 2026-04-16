@@ -14,6 +14,9 @@
     - [Exemplo Prático](#exemplo-prático)
   - [Preenchimento de um Bloco por Vez (One Time Pad)](#preenchimento-de-um-bloco-por-vez-one-time-pad)
     - [Tabela XOR (ou Exclusivo)](#tabela-xor-ou-exclusivo)
+  - [Projeto VENONA](#projeto-venona)
+  - [Cifra de Livro de Código](#cifra-de-livro-de-código)
+  - [A Taxonomia da Criptografia](#a-taxonomia-da-criptografia)
 
 ## Introdução
 
@@ -250,7 +253,7 @@ $$
 
 > 2ª) Suponha que Alice é capturada por seus inimigos, que também interceptaram o texto cifrado. Os sequestradores estão ansiosos para ler a mensagem, e Alice é incentivada a fornecer a chave para esta mensagem “secreta”. Alice alega que ela é na verdade um agente duplo e para provar que é, ela afirma que a chave é: **111 101 000 011 101 110 001 011 101 101**.
 
-&emsp; Quando os captores de Alice "decifrarem" o texto cifrado usando esta chave, eles acham:
+&emsp; Quando os captores de Alice "decifrarem" o texto cifrado usando esta chave, eles acham a mensagem a seguir. Por não estarem muito bem informados sobre criptografia, felicitam Alice por seu patriotismo e a libertam.
 
 | Mensagem Enviada | s | r | l | h | s | s | t | h | s | r |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -258,3 +261,72 @@ $$
 | key | 111 | 101 | 000 | 011 | 101 | 110 | 001 | 011 | 101 | 101 |
 | plaintext | 001 | 000 | 100 | 010 | 011 | 000 | 110 | 010 | 011 | 000 |
 | Mensagem Receida | H | E | L | I | K | E | S | I | K | E |
+
+&emsp; Estes exemplos indicam porque um bloco por vez é comprovadamente seguro. Se a chave for escolhida aleatoriamente, então um atacante, que vê o texto cifrado não tem nenhuma informação sobre a mensagem de que não seja o seu comprimento. 
+
+&emsp; Isto é, com o texto cifrado, de qualquer texto original, pode ser gerada/escolhida uma chave de qualquer comprimento da mensagem, e todos textos planos possíveis são igualmente prováveis. 
+
+&emsp; E uma vez que a mensagem poderia ser preenchida com qualquer número de letras aleatórias antes de criptografia, a informação do comprimento é inútil para qualquer um. Assim, o texto cifrado não fornece nenhuma informação relevante a todos, sobre o texto original. Este é o sentido que o um bloco por vez é comprovadamente seguro.
+
+&emsp; Evidentemente, isso pressupõe que a cifra é usada corretamente. O bloco, ou chave, deve ser escolhido de forma aleatória, usada apenas uma vez, e deve ser conhecida apenas pelo emissor e receptor.
+
+&emsp; No entanto, existe um sério obstáculo para a estratégia: **o bloco é do mesmo comprimento que a mensagem**, que é a chave a ser transmitida com segurança ao destinatário antes de o texto cifrado poder ser decifrado.
+
+&emsp; Por que é que o um bloco por vez pode ser usado apenas uma vez?
+
+> Suponha que temos duas mensagens de texto simples P1 e P2, codificado como C1 = P1 ⊕ K e C2 = P2 ⊕ K, ou seja, temos duas mensagens criptografadas com o bloco K por vez. Na criptoanálise isso é conhecido como um ataque de profundidade (depth). No caso de um bloco por vez em profundidade
+>
+> C1 ⊕ C2 = P1 ⊕ K ⊕ P2 ⊕ K = P1 ⊕ P2
+
+## Projeto VENONA
+
+&emsp; O projeto VENONA é um exemplo interessante de utilização do mundo real de um bloco por vez. Na década de 1930 e 1940, espiões soviéticos introduzem nos Estados Unidos a técnica de um bloco por vez. Os espiões usaram essas chaves para criptografar mensagens importantes, que foram então enviadas de volta para Moscou. 
+
+&emsp; Estas mensagens foram tratadas com as operações de espionagem mais sensível daquela época. Em particular, o segredo do desenvolvimento da primeira bomba atômica foi um foco de grande parte da espionagem. Rosenberg, Alger Hiss, e muitos outros espiões foram identificados - e outros espiões nunca identificados.
+
+## Cifra de Livro de Código
+
+&emsp; Uma cifra de livro de código clássica é, literalmente, um dicionário como um livro que contém as palavras e as suas palavras-código correspondentes. A tabela a seguir contém um trecho de um famoso livro de códigos utilizado pela Alemanha durante a Primeira Guerra Mundial.
+
+| Plaintext | Ciphertext |
+| :-------: | :--------: |
+| Februar | 13605 |
+| fest | 13732 |
+| finanzielle | 13850 |
+| folgender | 13918 |
+| Frieden | 17142 |
+| Friedenschluss | 17149 |
+
+&emsp; Por exemplo, para criptografar “Februar”, a palavra inteira foi substituída com a chave de 5 dígitos 13.605. 
+
+&emsp; O livro de códigos da Tabela foi utilizado para criptografia, enquanto um livro de códigos correspondentes, combinado com chaves de 5 dígitos em ordem numérica, foi utilizado para descriptografia do livro de código. 
+
+&emsp; Um livro de código é uma cifra
+de substituição, mas as substituições estão longe de serem
+simples, pois as substituições são para palavras inteiras, ou
+mesmo frases.
+
+&emsp; Cifras de bloco modernos utilizam algoritmos complexos para gerar texto cifrado em texto puro (e vice-versa), mas a um nível superior, uma cifra de bloco pode ser visto como um livro de códigos, onde cada chave escolhida pode determinar um livro de códigos distinto.
+
+## A Taxonomia da Criptografia
+
+&emsp; Embora a distinção entre as chaves públicas e chaves simétricas pode parecer menor, acontece que a criptografia de chave pública pode fazer algumas coisas úteis que são impossíveis de alcançar com cifras simétricas.
+
+&emsp; Na criptografia de chave pública, as chaves de criptografia podem se tornar públicas. Se, por exemplo, for colocada a sua chave pública na Internet, qualquer pessoa com uma conexão com a Internet pode criptografar uma mensagem para você, sem um acordo prévio sobre a chave.
+
+&emsp; Isto é um contraste com uma cifra simétrica, onde os participantes **devem concordar** com uma chave **com antecedência**.
+
+&emsp; Antes da adoção de uma chave pública de criptografia, a segurança de entrega de chaves simétricas foi o calcanhar de Aquiles da criptografia moderna.
+
+&emsp; Criptografia de chave pública tem outro recurso extremamente útil e surpreendente, para o qual não existe paralelo no mundo de chave simétrica. Suponha que uma mensagem é "codificada", com a chave privada em vez da chave pública. Desde que a chave pública é pública, qualquer pessoa poderá decifrar a mensagem. À primeira vista, essa criptografia pode parecer inútil, no entanto, ela pode ser usada como uma forma digital de uma assinatura manuscrita: qualquer um pode ler a assinatura, mas apenas o assinante poderia ter criado a assinatura.
+
+&emsp; Qualquer coisa que podemos fazer com uma cifra simétrica também pode-se realizar com um sistema de encriptação de chave pública. Criptografia de chave pública também nos permite fazer coisas que não podem ser realizadas com uma cifra simétrica. Então porque não usar a criptografia de chave pública para tudo?
+
+&emsp; **Velocidade**: Criptografia de chave simétrica tem várias ordens de grandeza mais rápida do que chaves públicas. Como resultado, a chave de criptografia simétrica é usada para criptografar a grande maioria dos dados de hoje. No entanto, a criptografia de chave pública tem um papel crítico a desempenhar na segurança da informação moderna.
+
+&emsp; Cada uma das cifras clássicas discutidas anteriormente são cifras simétricas. Modernas cifras simétricas podem ser subdivididos em **cifras de fluxo** e **cifras de bloco**.
+
+- **Cifras de fluxo** generalizam a abordagem de um bloco por vez, sacrificando a segurança demonstrada por uma chave, que é de duração razoável.
+- **Cifra de bloco** é, em certo sentido, a generalização de um livro de códigos. A chave determina o livro de códigos, e enquanto a chave permanece fixa, o livro de código utilizado não muda. Inversamente, quando as chaves mudam, um livro de códigos diferente é selecionado.
+
+&emsp; Enquanto cifras de fluxo dominaram a pós-era da Segunda Guerra, cifras de blocos são as mais utilizadas na criptografia simétrica, com algumas exceções notáveis. De modo geral, cifras de blocos são mais fáceis para otimizar para implementações de software, enquanto cifras de fluxo são geralmente mais eficiente no hardware.
