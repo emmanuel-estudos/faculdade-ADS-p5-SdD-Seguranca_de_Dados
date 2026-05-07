@@ -42,7 +42,7 @@
 
 # Segurança de Dados
 
-> **Última sincronização:** 14/04/2026 22:52:47
+> **Última sincronização:** 16/04/2026 16:22:30
 
 ## Sumário de Aulas
 
@@ -50,7 +50,7 @@
 - Aula 02 - [Contextualização a Segurança da Informação](#contextualização-a-segurança-da-informação)
 - Aula 03 - [Criptografia Básica](#criptografia-básica)
 - Aula 04 - [Criptografia de Chave Simétrica](#criptografia-de-chave-simétrica)
-- Aula 07 - [Título não encontrado](#título-não-encontrado)
+- Aula 07 - [Márquinas Virtuais](#márquinas-virtuais)
 
 ---
 
@@ -157,6 +157,7 @@
   - [Incidentes de Segurança](#incidentes-de-segurança)
   - [Estatísticas de Ataques de Amplificação](#estatísticas-de-ataques-de-amplificação)
   - [Estatísticas de DNS maliciosos](#estatísticas-de-dns-maliciosos)
+    - [ATENÇÃO](#atenção)
   - [Estatísticas de SPAM](#estatísticas-de-spam)
   - [As 20 Portas TCP que mais sofreram varreduras em 2020](#as-20-portas-tcp-que-mais-sofreram-varreduras-em-2020)
   - [Ataques por Número de Sistema Autônomo (ASN)](#ataques-por-número-de-sistema-autônomo-asn)
@@ -467,18 +468,18 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
 
 &emsp; INSERIR **``Gráfico de Servidores DNS maliciosos no Brasil e fora do Brasil (ativos por dia) - (agosto/2021 até agosto/2023)``**
 
-> ### ATENÇÃO
->
+#### ATENÇÃO
+
 > &emsp; Estas estatísticas são **relativas** a servidores DNS maliciosos (rogue) sendo usados para **sequestro de DNS (DNS Hijacking)**. Ou seja, um servidor:
 >
-> * autoritativa para os domínios das vítimas
-> * recursivo aberto, para resposta às demais consultas
+> - autoritativa para os domínios das vítimas
+> - recursivo aberto, para resposta às demais consultas
 >
 > &emsp; Estas estatísticas:
 >
-> * <spam style="color: red">não são</spam> de DNS invadidos;
-> * <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
-> * <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
+> - <spam style="color: red">não são</spam> de DNS invadidos;
+> - <spam style="color: red">não são</spam> de envenenamento (cache poisoning);
+> - <spam style="color: red">não são</spam> de sequestro de domínio (domain hijacking).
 
 ### Estatísticas de SPAM
 
@@ -569,6 +570,11 @@ segurança das redes e serviços de Internet, bem assim para a sua crescente e a
   - [Definição de Segurança](#definição-de-segurança)
   - [Cifra de Transposição Dupla](#cifra-de-transposição-dupla)
     - [Exemplo Prático](#exemplo-prático)
+  - [Preenchimento de um Bloco por Vez (One Time Pad)](#preenchimento-de-um-bloco-por-vez-one-time-pad)
+    - [Tabela XOR (ou Exclusivo)](#tabela-xor-ou-exclusivo)
+  - [Projeto VENONA](#projeto-venona)
+  - [Cifra de Livro de Código](#cifra-de-livro-de-código)
+  - [A Taxonomia da Criptografia](#a-taxonomia-da-criptografia)
 
 ### Introdução
 
@@ -747,7 +753,141 @@ $$
 
 &emsp; Ao contrário de uma substituição simples, a transposição dupla não faz nada para disfarçar as letras que aparecem na mensagem. Mas isso parece não impedir um ataque que se baseia em informações estatísticas contidas no texto original, uma vez que as estatísticas do texto plano são debruçadas ao longo do texto cifrado. A transposição dupla não é uma cifra trivial de quebrar. A ideia de informação de texto plano manchado com o texto cifrado é tão útil que é empregado por cifras de blocos modernas.
 
+### Preenchimento de um Bloco por Vez (One Time Pad)
 
+&emsp; Também conhecido como **Vernam**, é um sistema de encriptação comprovadamente seguro. Historicamente foi utilizada em vários momentos, mas não é muito prática para a maioria das situações. No entanto, ele serve para ilustrar alguns conceitos importantes.
+
+&emsp; Para simplificar, vamos considerar um alfabeto com apenas **oito letras**. O nosso alfabeto e a correspondente representação binária de letras são dadas na Tabela. É importante notar que o mapeamento entre as letras e os bits não é segredo. Esse mapeamento serve como um efeito similar com o código ASCII, que não é secreto.
+
+&emsp; Suponha que uma espiã chamada Alice quer criptografar a mensagem de texto plano: **heilhitler**.
+
+&emsp; Usando um bloco por vez, ela consulta a Tabela a seguir para converter as letras para uma string de bits: **001 000 010 100 001 010 111 100 000 101**.
+
+| Letra | Binário |
+| :---: | :------ |
+| e | 000 |
+| h | 001 |
+| i | 010 |
+| k | 011 |
+| l | 100 |
+| r | 101 |
+| s | 110 |
+| t | 111 |
+
+#### Tabela XOR (ou Exclusivo)
+
+| x | y | z |
+| :-: | :-: | :-: |
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
+---------
+
+&emsp; Um bloco por vez exige uma chave que consiste de uma sequência de bits selecionados aleatoriamente que têm o **mesmo comprimento da mensagem**. A chave é então calculada com **XOR (ou exclusivo)** com o texto para produzir o texto cifrado.
+
+&emsp; Denotamos o bit XOR de x com o bit y, como x ⊕ y. Desde x ⊕ y ⊕ y = x. Logo, a decodificação é realizada também por XOR com a mesma chave do texto cifrado.
+
+| | h | e | i | l | h | i | t | l | e | r |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ciphertext** | 001 | 000 | 010 | 100 | 001 | 010 | 111 | 100 | 000 | 101 |
+| **key** | 111 | 101 | 110 | 101 | 111 | 100 | 000 | 101 | 110 | 000 | 
+| **plaintext** | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| | s | r | l | h | s | s | t | h | s | r |
+
+&emsp; Vamos considerar um par de cenários:
+
+> 1ª) Suponha que Alice tem um inimigo, Charlie, dentro de sua organização de espionagem. Charlie afirma que a chave real usada para criptografar mensagens de Alice é: **101 111 000 101 111 100 000 101 110 000**.
+
+&emsp; Quando Bob decifra o texto cifrado usando essa chave, ele encontrará:
+
+| | h | e | i | l | h | i | t | l | e | r |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **ciphertext** | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| **key** | 101 | 111 | 000 | 101 | 111 | 100 | 000 | 101 | 110 | 000 | 
+| **plaintext** | 011 | 010 | 100 | 100 | 001 | 010 | 111 | 100 | 000 | 101 |
+| | k | i | l | l | h | i | t | h | e | r |
+
+> 2ª) Suponha que Alice é capturada por seus inimigos, que também interceptaram o texto cifrado. Os sequestradores estão ansiosos para ler a mensagem, e Alice é incentivada a fornecer a chave para esta mensagem “secreta”. Alice alega que ela é na verdade um agente duplo e para provar que é, ela afirma que a chave é: **111 101 000 011 101 110 001 011 101 101**.
+
+&emsp; Quando os captores de Alice "decifrarem" o texto cifrado usando esta chave, eles acham a mensagem a seguir. Por não estarem muito bem informados sobre criptografia, felicitam Alice por seu patriotismo e a libertam.
+
+| Mensagem Enviada | s | r | l | h | s | s | t | h | s | r |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ciphertext | 110 | 101 | 100 | 001 | 110 | 110 | 111 | 001 | 110 | 101 |
+| key | 111 | 101 | 000 | 011 | 101 | 110 | 001 | 011 | 101 | 101 |
+| plaintext | 001 | 000 | 100 | 010 | 011 | 000 | 110 | 010 | 011 | 000 |
+| Mensagem Receida | H | E | L | I | K | E | S | I | K | E |
+
+&emsp; Estes exemplos indicam porque um bloco por vez é comprovadamente seguro. Se a chave for escolhida aleatoriamente, então um atacante, que vê o texto cifrado não tem nenhuma informação sobre a mensagem de que não seja o seu comprimento. 
+
+&emsp; Isto é, com o texto cifrado, de qualquer texto original, pode ser gerada/escolhida uma chave de qualquer comprimento da mensagem, e todos textos planos possíveis são igualmente prováveis. 
+
+&emsp; E uma vez que a mensagem poderia ser preenchida com qualquer número de letras aleatórias antes de criptografia, a informação do comprimento é inútil para qualquer um. Assim, o texto cifrado não fornece nenhuma informação relevante a todos, sobre o texto original. Este é o sentido que o um bloco por vez é comprovadamente seguro.
+
+&emsp; Evidentemente, isso pressupõe que a cifra é usada corretamente. O bloco, ou chave, deve ser escolhido de forma aleatória, usada apenas uma vez, e deve ser conhecida apenas pelo emissor e receptor.
+
+&emsp; No entanto, existe um sério obstáculo para a estratégia: **o bloco é do mesmo comprimento que a mensagem**, que é a chave a ser transmitida com segurança ao destinatário antes de o texto cifrado poder ser decifrado.
+
+&emsp; Por que é que o um bloco por vez pode ser usado apenas uma vez?
+
+> Suponha que temos duas mensagens de texto simples P1 e P2, codificado como C1 = P1 ⊕ K e C2 = P2 ⊕ K, ou seja, temos duas mensagens criptografadas com o bloco K por vez. Na criptoanálise isso é conhecido como um ataque de profundidade (depth). No caso de um bloco por vez em profundidade
+>
+> C1 ⊕ C2 = P1 ⊕ K ⊕ P2 ⊕ K = P1 ⊕ P2
+
+### Projeto VENONA
+
+&emsp; O projeto VENONA é um exemplo interessante de utilização do mundo real de um bloco por vez. Na década de 1930 e 1940, espiões soviéticos introduzem nos Estados Unidos a técnica de um bloco por vez. Os espiões usaram essas chaves para criptografar mensagens importantes, que foram então enviadas de volta para Moscou. 
+
+&emsp; Estas mensagens foram tratadas com as operações de espionagem mais sensível daquela época. Em particular, o segredo do desenvolvimento da primeira bomba atômica foi um foco de grande parte da espionagem. Rosenberg, Alger Hiss, e muitos outros espiões foram identificados - e outros espiões nunca identificados.
+
+### Cifra de Livro de Código
+
+&emsp; Uma cifra de livro de código clássica é, literalmente, um dicionário como um livro que contém as palavras e as suas palavras-código correspondentes. A tabela a seguir contém um trecho de um famoso livro de códigos utilizado pela Alemanha durante a Primeira Guerra Mundial.
+
+| Plaintext | Ciphertext |
+| :-------: | :--------: |
+| Februar | 13605 |
+| fest | 13732 |
+| finanzielle | 13850 |
+| folgender | 13918 |
+| Frieden | 17142 |
+| Friedenschluss | 17149 |
+
+&emsp; Por exemplo, para criptografar “Februar”, a palavra inteira foi substituída com a chave de 5 dígitos 13.605. 
+
+&emsp; O livro de códigos da Tabela foi utilizado para criptografia, enquanto um livro de códigos correspondentes, combinado com chaves de 5 dígitos em ordem numérica, foi utilizado para descriptografia do livro de código. 
+
+&emsp; Um livro de código é uma cifra
+de substituição, mas as substituições estão longe de serem
+simples, pois as substituições são para palavras inteiras, ou
+mesmo frases.
+
+&emsp; Cifras de bloco modernos utilizam algoritmos complexos para gerar texto cifrado em texto puro (e vice-versa), mas a um nível superior, uma cifra de bloco pode ser visto como um livro de códigos, onde cada chave escolhida pode determinar um livro de códigos distinto.
+
+### A Taxonomia da Criptografia
+
+&emsp; Embora a distinção entre as chaves públicas e chaves simétricas pode parecer menor, acontece que a criptografia de chave pública pode fazer algumas coisas úteis que são impossíveis de alcançar com cifras simétricas.
+
+&emsp; Na criptografia de chave pública, as chaves de criptografia podem se tornar públicas. Se, por exemplo, for colocada a sua chave pública na Internet, qualquer pessoa com uma conexão com a Internet pode criptografar uma mensagem para você, sem um acordo prévio sobre a chave.
+
+&emsp; Isto é um contraste com uma cifra simétrica, onde os participantes **devem concordar** com uma chave **com antecedência**.
+
+&emsp; Antes da adoção de uma chave pública de criptografia, a segurança de entrega de chaves simétricas foi o calcanhar de Aquiles da criptografia moderna.
+
+&emsp; Criptografia de chave pública tem outro recurso extremamente útil e surpreendente, para o qual não existe paralelo no mundo de chave simétrica. Suponha que uma mensagem é "codificada", com a chave privada em vez da chave pública. Desde que a chave pública é pública, qualquer pessoa poderá decifrar a mensagem. À primeira vista, essa criptografia pode parecer inútil, no entanto, ela pode ser usada como uma forma digital de uma assinatura manuscrita: qualquer um pode ler a assinatura, mas apenas o assinante poderia ter criado a assinatura.
+
+&emsp; Qualquer coisa que podemos fazer com uma cifra simétrica também pode-se realizar com um sistema de encriptação de chave pública. Criptografia de chave pública também nos permite fazer coisas que não podem ser realizadas com uma cifra simétrica. Então porque não usar a criptografia de chave pública para tudo?
+
+&emsp; **Velocidade**: Criptografia de chave simétrica tem várias ordens de grandeza mais rápida do que chaves públicas. Como resultado, a chave de criptografia simétrica é usada para criptografar a grande maioria dos dados de hoje. No entanto, a criptografia de chave pública tem um papel crítico a desempenhar na segurança da informação moderna.
+
+&emsp; Cada uma das cifras clássicas discutidas anteriormente são cifras simétricas. Modernas cifras simétricas podem ser subdivididos em **cifras de fluxo** e **cifras de bloco**.
+
+- **Cifras de fluxo** generalizam a abordagem de um bloco por vez, sacrificando a segurança demonstrada por uma chave, que é de duração razoável.
+- **Cifra de bloco** é, em certo sentido, a generalização de um livro de códigos. A chave determina o livro de códigos, e enquanto a chave permanece fixa, o livro de código utilizado não muda. Inversamente, quando as chaves mudam, um livro de códigos diferente é selecionado.
+
+&emsp; Enquanto cifras de fluxo dominaram a pós-era da Segunda Guerra, cifras de blocos são as mais utilizadas na criptografia simétrica, com algumas exceções notáveis. De modo geral, cifras de blocos são mais fáceis para otimizar para implementações de software, enquanto cifras de fluxo são geralmente mais eficiente no hardware.
 
 ---
 
@@ -764,7 +904,54 @@ $$
 
 ---
 
+## Márquinas Virtuais
 
+### Estabelecenco Conexão
+
+#### VM
+
+- liga a máquina
+- login (ads; 654123)
+- dhclient enp0s8
+- ifconfig enp0s8
+
+#### Terminal do Computador
+
+```bash
+root@ubuntuserver:/home/ads# ssh ads@[ip_enp0s8]
+```
+
+#### VM
+
+```bash
+sudo su
+root@ubuntuserver:/home/ads# docker start80; docker attach 80
+root@80987d9d1e6c:/# ping 8.8.8.8
+root@80987d9d1e6c:/#
+```
+
+### Verificando se a conexão
+
+#### VM (fora do container)
+
+```bash
+iptables --policy FORWARD ACCEPT
+iptables -t nat -A POSTROUTING -j MASQUERADE
+```
+
+#### Container Docker (poweshell ou terminal)
+
+```bash
+ping 8.8.8.8
+```
+
+#### Problema no Container
+
+Caso o ping ainda não seja possível, execute o comando a seguir:
+
+```bash
+nft flush ruleset
+```
 
 ---
 
